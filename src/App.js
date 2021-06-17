@@ -50,6 +50,8 @@ function HorizontalAxis({ scale,strokeColor,yPro }) {
                   textAnchor="end"
                   dominantBaseline="central"
                   fontSize="12"
+
+
                 >
                   {x}
                 </text>
@@ -164,7 +166,9 @@ export default function App() {
                 cy={yScale(item[yProperty])}
                 r="5"
                 fill={colorScale(item.species)}
-                style={{ transition:"1s" }}
+                style={{ transitionDuration:"1s",
+                         transitionProperty:'all',
+                         transitionDelay:"0.2s"}}
               />
             );
           })}
